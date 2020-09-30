@@ -21,6 +21,7 @@ Now you can upload/download/view readership stat based on your role.
 Some links info:
  
  __/Readerships/Index__ : Summary of readerships, total views and last access tiem for each report.
+ 
  __/Readerships/Detailed__: Individual access for each users
  
  
