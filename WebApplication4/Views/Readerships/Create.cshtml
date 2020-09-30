@@ -1,0 +1,46 @@
+﻿@model WebApplication4.Models.Readership
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Readership</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="view" class="control-label"></label>
+                <input asp-for="view" class="form-control" />
+                <span asp-validation-for="view" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="reportId" class="control-label"></label>
+                <select asp-for="reportId" class ="form-control" asp-items="ViewBag.reportId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="userId" class="control-label"></label>
+                <select asp-for="userId" class ="form-control" asp-items="ViewBag.userId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="lastAccessTime" class="control-label"></label>
+                <input asp-for="lastAccessTime" class="form-control" />
+                <span asp-validation-for="lastAccessTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
